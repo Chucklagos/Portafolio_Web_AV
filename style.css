@@ -85,7 +85,8 @@ h1, h2, h3 { font-family: var(--font-display); font-weight: 700; line-height: 1.
 h2 { font-size: clamp(1.5rem, 3.5vw, 2.2rem); }
 h3 { font-size: 1.18rem; margin: 0; }
 
-p { margin: 0; }
+p, ul, ol { margin: 0; }
+ul, ol { list-style: none; padding: 0; }
 
 /* Skip link */
 .skip-link {
@@ -508,6 +509,9 @@ p { margin: 0; }
 .formacion-period { color: var(--muted); font-size: 0.85rem; margin-top: 0.15rem; display: inline-block; }
 
 .formacion-equivalence {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
   background: linear-gradient(135deg, #FDF3E0 0%, #FBEED5 100%);
   border: 1px solid var(--gold-light);
   position: relative;
@@ -561,8 +565,8 @@ p { margin: 0; }
 .contact-cards { display: flex; flex-direction: column; gap: 0.75rem; }
 .contact-card {
   display: flex;
+  align-items: center;
   gap: 0.85rem;
-  align-items: flex-start;
   padding: 1rem 1.25rem;
   border-radius: var(--radius-lg);
   border: 1px solid var(--line);
@@ -573,39 +577,6 @@ p { margin: 0; }
 .contact-card p { margin: 0; }
 .contact-card a { color: var(--ink-soft); }
 .contact-card a:hover { color: var(--blue); }
-
-.contact-form {
-  display: grid;
-  gap: 0.9rem;
-  padding: 2rem 1.5rem;
-  border-radius: var(--radius-lg);
-  border: 1px solid var(--line);
-  background: var(--card);
-  box-shadow: var(--shadow);
-}
-
-.form-field { display: flex; flex-direction: column; gap: 0.3rem; }
-.form-field label { font-weight: 600; color: var(--ink); font-size: 0.9rem; }
-.req { color: var(--blue); font-weight: 700; }
-
-.form-field input, .form-field textarea {
-  font-family: var(--font-body);
-  font-size: 0.98rem;
-  padding: 0.7rem 0.85rem;
-  border: 1px solid var(--line);
-  border-radius: var(--radius);
-  background: #FFFFFF;
-  color: var(--ink);
-  transition: border-color 0.2s ease, box-shadow 0.2s ease;
-  resize: vertical;
-}
-.form-field input:focus, .form-field textarea:focus {
-  border-color: var(--blue);
-  box-shadow: 0 0 0 3px var(--blue-light);
-  outline: none;
-}
-
-.cta-submit { align-self: flex-start; margin-top: 0.25rem; }
 
 /* CV download (dentro de la sección de contacto) */
 .cv-download { text-align: center; margin-top: clamp(2.5rem, 6vw, 4rem); }
