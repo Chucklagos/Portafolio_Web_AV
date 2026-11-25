@@ -1,223 +1,434 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="description" content="Landing page de Allan Velásquez, Ingeniero Químico Industrial con experiencia en análisis de laboratorio, control de calidad y optimización de procesos industriales.">
-    <meta name="keywords" content="Ingeniería Química Industrial, Análisis de Laboratorio, Control de Calidad, Optimización de Procesos, Allan Velásquez">
-    <meta name="author" content="Allan Velásquez">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Allan Velásquez - Ingeniero Químico Industrial</title>
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <style>
-        body {
-            background: linear-gradient(to bottom, #f7f9fc, #e8edf3);
-            font-family: Arial, sans-serif;
-            color: #333;
-        }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-        header {
-            background: linear-gradient(to right, #004080, #0066cc);
-            color: #fff;
-            padding: 100px 0;
-        }
+  <!-- Título y descripción (SEO) -->
+  <title>Allan Fernando Velasquez Corea | Ingeniero Químico Industrial — Procesos, Producción y Calidad</title>
+  <meta name="description" content="Allan Fernando Velasquez Corea, Ingeniero Químico Industrial con equivalencia oficial al nivel de Grado en España y experiencia en supervisión de operaciones, producción industrial, control de procesos mediante sistemas SCADA, análisis fisicoquímicos y control de calidad. Ingeniero de procesos, supervisor de producción industrial, jefe de turno. Portafolio profesional con formación y contacto. Telf: +34 624 81 39 13 · fercore07@gmail.com" />
+  <meta name="author" content="Allan Fernando Velasquez Corea" />
+  <meta name="keywords" content="Allan Fernando Velasquez Corea, Ingeniero químico industrial en España, Ingeniero de procesos, Supervisor de producción industrial, Jefe de turno industrial, Control de procesos SCADA, Ingeniero de producción, Control de calidad industrial, Ingenieroindustrial, Portafolio Allan Velásquez" />
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+  <meta name="theme-color" content="#0f172a" />
 
-        header h1 {
-            font-size: 3.5rem;
-            animation: fadeIn 2s;
-        }
+  <!-- Open Graph (compartido en redes) -->
+  <meta property="og:title" content="Allan Fernando Velasquez Corea — Ingeniero Químico Industrial | Procesos, Producción y Calidad" />
+  <meta property="og:description" content="Ingeniero Químico Industrial con equivalencia oficial al nivel de Grado en España y experiencia en supervisión de operaciones, control de procesos mediante sistemas SCADA y puesta en marcha de instalaciones industriales. Experiencia profesional como jefe de turno y supervisor de producción industrial." />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="es_ES" />
+  <meta property="og:site_name" content="Allan Velásquez — Ingeniero Químico Industrial" />
+  <meta property="og:url" content="https://allanvelasquez.netlify.app/" />
+  <meta property="og:image" content="https://allanvelasquez.netlify.app/img/profile.jpeg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="1600" />
 
-        @keyframes fadeIn {
-            from {opacity: 0;}
-            to {opacity: 1;}
-        }
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Allan Fernando Velasquez Corea — Ingeniero Químico Industrial | Procesos, Producción y Calidad" />
+  <meta name="twitter:description" content="Ingeniero Químico Industrial con equivalencia oficial al nivel de Grado en España y experiencia en supervisión de operaciones, control de procesos y puesta en marcha de instalaciones." />
+  <meta name="twitter:site" content="@Portafolio_AV" />
 
-        .icon-container img {
-            width: 120px;
-            animation: bounce 2s infinite;
-        }
+  <link rel="canonical" href="https://allanvelasquez.netlify.app/" />
 
-        @keyframes bounce {
-            0%, 100% {transform: translateY(0);}
-            50% {transform: translateY(-10px);}
-        }
+  <!-- Tipografías modernas (Google Fonts) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&amp;family=Inter:wght@400;500;600;700&amp;display=swap" media="all" />
 
-        .section-title {
-            color: #004080;
-            margin-bottom: 30px;
-        }
+  <!-- Iconos Bootstrap Icons (CDN) -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.2/font/bootstrap-icons.min.css" />
 
-        .card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-            transition: transform 0.3s, box-shadow 0.3s;
-        }
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
 
-        footer {
-            background: #004080;
-            color: #fff;
-            padding: 20px 0;
-        }
-
-        /* Ajustes de espaciados */
-        section {
-            padding: 60px 0;
-        }
-
-        .nav-scroller {
-            background: #e8edf3;
-        }
-
-        .nav a {
-            color: #004080;
-            font-weight: bold;
-        }
-
-        .nav a:hover {
-            color: #002e5d;
-        }
-
-        /* Mejora de formulario */
-        form .form-label {
-            font-weight: bold;
-        }
-    </style>
+  <!-- Datos estructurados (Schema.org: Person) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Allan Fernando Velasquez Corea",
+    "givenName": "Allan",
+    "familyName": "Velasquez Corea",
+    "url": "https://allanvelasquez.netlify.app/",
+    "image": "https://allanvelasquez.netlify.app/img/profile.jpeg",
+    "jobTitle": "Ingeniero Químico Industrial",
+    "description": "Allan Fernando Velasquez Corea, Ingeniero Químico Industrial con equivalencia oficial al nivel de Grado en España y experiencia en supervisión de operaciones, producción industrial, control de procesos mediante sistemas SCADA, análisis fisicoquímicos y control de calidad. Experiencia en precomisionado, puesta en marcha de instalaciones y mejora continua. Orientado a la eficiencia operativa, el tratamiento de aguas y el trabajo con equipos multidisciplinares.",
+    "email": "fercore07@gmail.com",
+    "telephone": "+34 624 81 39 13",
+    "address": { "@type": "PostalAddress", "addressCountry": "ES" },
+    "sameAs": [
+      "https://linkedin.com/in/allan-velasquez-29a45221a",
+      "https://github.com/Chucklagos/Portafolio_Web_AV"
+    ]
+  }
+  </script>
 </head>
+
 <body>
-    <!-- Navegación interna para facilitar scroll a secciones -->
-    <div class="nav-scroller py-2">
-        <nav class="nav d-flex justify-content-center">
-            <a class="p-2" href="#about">Sobre mí</a>
-            <a class="p-2" href="#experience">Experiencia</a>
-            <a class="p-2" href="#skills">Habilidades</a>
-            <a class="p-2" href="#contact">Contáctame</a>
-        </nav>
+  <!-- Enlace de acceso rápido para teclados -->
+  <a href="#main-content" class="skip-link">Saltar al contenido principal</a>
+
+  <!-- Navegación principal (fija al hacer scroll) -->
+  <nav class="site-nav" role="navigation" aria-label="Navegación principal">
+    <div class="container">
+      <a class="site-nav-brand" href="#inicio">Allan Velásquez</a>
+      <ul class="site-nav-links">
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#sobre">Sobre mí</a></li>
+        <li><a href="#areas">Áreas</a></li>
+        <li><a href="#experiencia">Experiencia</a></li>
+        <li><a href="#formacion">Formación</a></li>
+        <li><a href="#habilidades">Competencias</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+      <button type="button" class="site-nav-toggle" aria-expanded="false" aria-controls="site-nav-links"
+              aria-label="Abrir o cerrar el menú de navegación">
+        <span></span><span></span><span></span>
+      </button>
     </div>
+  </nav>
 
-    <!-- Header/Hero Section -->
-    <header class="text-center" role="banner">
-        <div class="container">
-            <h1 class="mb-4" tabindex="0">¡Hola! Soy Allan Velásquez</h1>
-            <p class="lead" tabindex="0">Ingeniero Químico Industrial con pasión por los retos, la innovación y la excelencia.</p>
-            <div class="icon-container my-4">
-                <!-- Añadido alt descriptivo -->
-                <img src="/img/erlenmayer.png" alt="Ilustración de un matraz Erlenmeyer" loading="lazy">
-            </div>
-            <a href="#about" class="btn btn-primary btn-lg" aria-label="Conoce más sobre Allan Velásquez">Conoce más</a>
+  <!-- Hero / Inicio profesional -->
+  <header class="hero" id="inicio" role="banner">
+    <div class="container">
+      <div class="hero-layout">
+        <div class="hero-copy">
+          <p class="eyebrow">Ingeniero Químico Industrial | Procesos, Producción y Calidad</p>
+          <h1 class="hero-title">Ingeniería de procesos, producción y operaciones industriales</h1>
+          <p class="hero-subtitle">Ingeniero Químico Industrial con experiencia en supervisión de operaciones, control de procesos y puesta en marcha de instalaciones industriales en España.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#experiencia">Conoce mi experiencia</a>
+            <a class="btn btn-outline" href="#contacto">Contactar</a>
+            <a class="btn btn-link" href="CvJ%20Allan%20Velasquez%20Farmacia.pdf">Descargar CV</a>
+            <a class="btn btn-link" href="https://linkedin.com/in/allan-velasquez-29a45221a" target="_blank" rel="noopener">Ver perfil de LinkedIn</a>
+          </div>
+          <p class="hero-contact">
+            <span class="hero-contact-item"><i class="bi bi-telephone-fill" aria-hidden="true"></i> +34 624 81 39 13</span>
+            <span class="hero-contact-item"><i class="bi bi-envelope-open-fill" aria-hidden="true"></i> <a href="mailto:fercore07@gmail.com">fercore07@gmail.com</a></span>
+          </p>
         </div>
-    </header>
+        <div class="hero-visual">
+          <img src="img/profile.jpeg"
+               alt="Foto de Allan Fernando Velasquez Corea, Ingeniero Químico Industrial"
+               width="1200" height="1600"
+               loading="eager" fetchpriority="high" />
+        </div>
+      </div>
+    </div>
+  </header>
 
-    <main>
-        <!-- About Section -->
-        <section id="about" aria-labelledby="about-title">
-            <div class="container">
-                <div class="row align-items-center">
-                    <div class="col-md-6">
-                        <h2 class="section-title" id="about-title" tabindex="0">Sobre mí</h2>
-                        <p tabindex="0">
-                            Soy un Ingeniero Químico Industrial con experiencia en análisis de laboratorio, control de calidad
-                            y optimización de procesos industriales. Mi objetivo es generar soluciones innovadoras que
-                            beneficien a la industria y a la sociedad.
-                        </p>
-                    </div>
-                    <div class="col-md-6">
-                        <!-- Añadir alt realista a la imagen -->
-                        <img src="https://via.placeholder.com/500x300" class="img-fluid rounded" alt="Foto de Allan Velásquez trabajando en un laboratorio" loading="lazy">
-                    </div>
+  <main id="main-content">
+
+    <!-- Sobre mí -->
+    <section id="sobre" class="section" aria-labelledby="sobre-t">
+      <div class="container">
+        <h2 class="section-title" id="sobre-t">Sobre mí</h2>
+        <p class="sobre-lead">Ingeniero Químico Industrial | Procesos, Producción y Calidad</p>
+        <p>Ingeniero Químico Industrial con equivalencia oficial al nivel de Grado en España y experiencia en supervisión de operaciones, producción industrial, control de procesos mediante sistemas SCADA, análisis fisicoquímicos y control de calidad. Experiencia en actividades de precomisionado y puesta en marcha, tratamiento de aguas, documentación técnica y aplicación de procedimientos de seguridad y calidad. Orientado a la mejora continua, la eficiencia operativa, la resolución de incidencias y el trabajo con equipos multidisciplinares.</p>
+      </div>
+    </section>
+
+    <!-- Áreas de especialización -->
+    <section id="areas" class="section section-alt" aria-labelledby="areas-t">
+      <div class="container">
+        <h2 class="section-title" id="areas-t">Áreas de especialización</h2>
+        <div class="cards-grid reveal" style="--delay: 0.15s">
+          <article class="card specialty-card">
+            <div class="icon-wrap"><i class="bi bi-gear" aria-hidden="true"></i></div>
+            <h3>Ingeniería de procesos</h3>
+            <p>Diseño y optimización de procesos industriales para mejorar la eficiencia operativa.</p>
+          </article>
+          <article class="card specialty-card">
+            <div class="icon-wrap"><i class="bi bi-speedometer" aria-hidden="true"></i></div>
+            <h3>Supervisión de operaciones industriales</h3>
+            <p>Supervisión de turnos y de operaciones industriales con seguimiento y control de equipos.</p>
+          </article>
+          <article class="card specialty-card">
+            <div class="icon-wrap"><i class="bi bi-building-fill" aria-hidden="true"></i></div>
+            <h3>Gestión de producción</h3>
+            <p>Gestión y optimización de la producción industrial: planificación, seguimiento y mejora continua.</p>
+          </article>
+          <article class="card specialty-card">
+            <div class="icon-wrap"><i class="bi bi-cpu" aria-hidden="true"></i></div>
+            <h3>Control de procesos mediante sistemas SCADA</h3>
+            <p>Monitorización y control de variables de proceso mediante sistemas SCADA, identificación de desviaciones.</p>
+          </article>
+          <article class="card specialty-card">
+            <div class="icon-wrap"><i class="bi bi-tools" aria-hidden="true"></i></div>
+            <h3>Precomisionado y puesta en marcha</h3>
+            <p>Precomisión de instrumentación y puesta en marcha de instalaciones industriales.</p>
+          </article>
+          <article class="card specialty-card">
+            <div class="icon-wrap"><i class="bi bi-flask" aria-hidden="true"></i></div>
+            <h3>Control de calidad y laboratorio químico</h3>
+            <p>Control de calidad y análisis fisicoquímicos en laboratorio, incluyendo tratamiento de aguas.</p>
+          </article>
+          <article class="card specialty-card">
+            <div class="icon-wrap"><i class="bi bi-arrow-repeat" aria-hidden="true"></i></div>
+            <h3>Mejora continua y eficiencia operativa</h3>
+            <p>Estrategias de mejora continua y eficiencia operativa basadas en datos y Procedimientos.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Experiencia profesional -->
+    <section id="experiencia" class="section" aria-labelledby="exp-t">
+      <div class="container">
+        <h2 class="section-title" id="exp-t">Experiencia profesional</h2>
+        <ol class="timeline" aria-label="Cronología de la experiencia profesional">
+          <!-- Jefe de turno — Valogreene CML -->
+          <li class="timeline-item is-current" id="job-valogreene">
+            <div class="timeline-marker"><span class="timeline-dot"></span></div>
+            <div class="timeline-card">
+              <header class="timeline-head">
+                <div class="timeline-info">
+                  <h3>Jefe de turno</h3>
+                  <p class="timeline-meta"><span class="timeline-company">Valogreene CML</span> · Madridejos, España · <time datetime="2026-06">Junio 2026</time> – Actualidad</p>
                 </div>
+                <span class="timeline-chip">Actualidad</span>
+              </header>
+              <ul class="timeline-bullets">
+                <li>Participación en actividades de precomisionado de instrumentación y pruebas funcionales de equipos.</li>
+                <li>Supervisión de operaciones por turnos y orientación del personal operativo.</li>
+                <li>Seguimiento del funcionamiento de equipos industriales.</li>
+                <li>Monitorización y control de variables de proceso mediante sistemas SCADA.</li>
+                <li>Identificación de anomalías y desviaciones operativas.</li>
+                <li>Identificación de oportunidades de mejora en equipos e instalaciones.</li>
+                <li>Elaboración de procedimientos, informes de turno y documentación técnica.</li>
+              </ul>
             </div>
-        </section>
-
-        <!-- Experience Section -->
-        <section id="experience" class="bg-light" aria-labelledby="experience-title">
-            <div class="container">
-                <h2 class="section-title text-center" id="experience-title" tabindex="0">Experiencia</h2>
-                <div class="row">
-                    <div class="col-md-6 mb-4">
-                        <article class="card h-100" role="article" aria-label="Experiencia en Inversiones Ecotek">
-                            <div class="card-body">
-                                <h3 class="card-title">Inversiones Ecotek</h3>
-                                <h4 class="card-subtitle mb-2 text-muted">Analista de laboratorio (Marzo 2023 - Junio 2023)</h4>
-                                <p class="card-text">Realicé análisis de minerales utilizando espectrofotometría UV-visible y otras
-                                    técnicas avanzadas, asegurando procesos de calidad en extracción de hierro.</p>
-                            </div>
-                        </article>
-                    </div>
-                    <div class="col-md-6 mb-4">
-                        <article class="card h-100" role="article" aria-label="Experiencia en Hondupalma">
-                            <div class="card-body">
-                                <h3 class="card-title">Hondupalma</h3>
-                                <h4 class="card-subtitle mb-2 text-muted">Pasante de Ingeniería Química (Enero 2023 - Febrero 2023)</h4>
-                                <p class="card-text">Optimicé procesos de refinación de aceite de palma y realicé análisis de
-                                    control de calidad en productos terminados, garantizando estándares óptimos.</p>
-                            </div>
-                        </article>
-                    </div>
+          </li>
+          <!-- Operario de producción — Biocom Energia S.L. -->
+          <li class="timeline-item" id="job-biocom">
+            <div class="timeline-marker"><span class="timeline-dot"></span></div>
+            <div class="timeline-card">
+              <header class="timeline-head">
+                <div class="timeline-info">
+                  <h3>Operario de producción</h3>
+                  <p class="timeline-meta"><span class="timeline-company">Biocom Energia S.L.</span> · Cuenca, España · <time datetime="2025-06">Junio 2025</time> – <time datetime="2026-05">Mayo 2026</time></p>
                 </div>
+              </header>
+              <ul class="timeline-bullets">
+                <li>Monitorización y control de procesos productivos mediante sistemas SCADA.</li>
+                <li>Verificación de parámetros de funcionamiento y estabilidad operativa.</li>
+                <li>Ejecución de controles de calidad.</li>
+                <li>Seguimiento del tratamiento de aguas residuales.</li>
+                <li>Identificación de desviaciones operativas.</li>
+                <li>Colaboración en la optimización de procesos industriales.</li>
+              </ul>
             </div>
-        </section>
-
-        <!-- Skills Section -->
-        <section id="skills" aria-labelledby="skills-title">
-            <div class="container text-center">
-                <h2 class="section-title" id="skills-title" tabindex="0">Habilidades</h2>
-                <div class="row mt-4">
-                    <!-- Uso de iconos de Bootstrap asegurando un buen contraste -->
-                    <div class="col-md-4 mb-4">
-                        <i class="bi bi-tools display-3 text-primary" aria-hidden="true"></i>
-                        <h3 class="mt-3" tabindex="0">Resolución de Problemas</h3>
-                    </div>
-                    <div class="col-md-4 mb-4">
-                        <i class="bi bi-flask display-3 text-primary" aria-hidden="true"></i>
-                        <h3 class="mt-3" tabindex="0">Análisis Químico</h3>
-                    </div>
-                    <div class="col-md-4 mb-4">
-                        <i class="bi bi-clipboard-check display-3 text-primary" aria-hidden="true"></i>
-                        <h3 class="mt-3" tabindex="0">Control de Calidad</h3>
-                    </div>
+          </li>
+          <!-- Técnico de laboratorio químico — Inversiones Ecotek -->
+          <li class="timeline-item" id="job-ecotek">
+            <div class="timeline-marker"><span class="timeline-dot"></span></div>
+            <div class="timeline-card">
+              <header class="timeline-head">
+                <div class="timeline-info">
+                  <h3>Técnico de laboratorio químico</h3>
+                  <p class="timeline-meta"><span class="timeline-company">Inversiones Ecotek</span> · Colón, Honduras · <time datetime="2023-03">Marzo 2023</time> – <time datetime="2023-06">Junio 2023</time></p>
                 </div>
+              </header>
+              <ul class="timeline-bullets">
+                <li>Gestión de reactivos y equipos de laboratorio.</li>
+                <li>Aplicación de Buenas Prácticas de Laboratorio e ISO/IEC 17025.</li>
+                <li>Análisis fisicoquímicos de agua, incluyendo pH, turbidez y dureza.</li>
+                <li>Desarrollo e implementación de métodos analíticos alternativos.</li>
+                <li>Colaboración en la implementación y certificación de ISO/IEC 17025.</li>
+              </ul>
             </div>
-        </section>
+          </li>
+        </ol>
+      </div>
+    </section>
 
-        <!-- Contact Section -->
-        <section id="contact" class="bg-light" aria-labelledby="contact-title">
-            <div class="container">
-                <h2 class="section-title text-center" id="contact-title" tabindex="0">Contáctame</h2>
-                <form class="mx-auto w-50" action="mailto:fercore07@gmail.com" method="POST" enctype="text/plain">
-                    <div class="mb-3">
-                        <label for="name" class="form-label">Nombre</label>
-                        <input type="text" class="form-control" id="name" name="nombre" placeholder="Tu nombre" required 
-                               aria-required="true" aria-describedby="nameHelp">
-                        <div id="nameHelp" class="form-text">Ingrese su nombre completo.</div>
-                    </div>
-                    <div class="mb-3">
-                        <label for="email" class="form-label">Correo</label>
-                        <input type="email" class="form-control" id="email" name="correo" placeholder="Tu correo" required 
-                               aria-required="true" aria-describedby="emailHelp">
-                        <div id="emailHelp" class="form-text">Ingrese un correo electrónico válido.</div>
-                    </div>
-                    <div class="mb-3">
-                        <label for="message" class="form-label">Mensaje</label>
-                        <textarea class="form-control" id="message" name="mensaje" rows="4" placeholder="Tu mensaje" required 
-                                  aria-required="true" aria-describedby="messageHelp"></textarea>
-                        <div id="messageHelp" class="form-text">Ingrese su mensaje o consulta.</div>
-                    </div>
-                    <button type="submit" class="btn btn-primary w-100" aria-label="Enviar el formulario de contacto">Enviar</button>
-                </form>
+    <!-- Formación académica -->
+    <section id="formacion" class="section section-alt" aria-labelledby="form-t">
+      <div class="container">
+        <h2 class="section-title" id="form-t">Formación académica</h2>
+        <article class="card education-card reveal">
+          <div class="card-head">
+            <span class="icon-wrap icon-lg"><i class="bi bi-award" aria-hidden="true"></i></span>
+            <div>
+              <h3>Ingeniería Química Industrial</h3>
+              <p class="education-institution">Universidad Nacional Autónoma de Honduras</p>
             </div>
-        </section>
-    </main>
+          </div>
+          <p class="education-years">Período: <time datetime="2015">2015</time> – <time datetime="2022">2022</time></p>
+          <span class="badge badge-equivalence">Equivalencia oficial al nivel de Grado en España (Ministerio de Ciencia, Innovación y Universidades, 2025)</span>
+          <p class="education-summary">Equivalencia oficial al nivel de Grado en España, reconocida mediante el Ministerio de Ciencia, Innovación y Universidades en 2025.</p>
+        </article>
+      </div>
+    </section>
 
-    <!-- Footer -->
-    <footer class="text-center" role="contentinfo">
-        <p class="mb-0">&copy; 2024 Allan Velásquez - Todos los derechos reservados.</p>
-    </footer>
+    <!-- Competencias técnicas -->
+    <section id="habilidades" class="section" aria-labelledby="hab-t">
+      <div class="container">
+        <h2 class="section-title" id="hab-t">Competencias técnicas</h2>
+        <div class="skills-grid">
+          <article class="card skills-card">
+            <h3 class="skills-card-title"><span class="icon-wrap icon-md"><i class="bi bi-gear" aria-hidden="true"></i></span> Procesos y operaciones</h3>
+            <ul class="skills-list">
+              <li>Supervisión de turnos</li>
+              <li>Sistemas SCADA</li>
+              <li>Control de variables de proceso</li>
+              <li>Precomisionado</li>
+              <li>Pruebas funcionales</li>
+              <li>Optimización de operaciones</li>
+            </ul>
+          </article>
+          <article class="card skills-card">
+            <h3 class="skills-card-title"><span class="icon-wrap icon-md"><i class="bi bi-flask" aria-hidden="true"></i></span> Calidad y laboratorio</h3>
+            <ul class="skills-list">
+              <li>Análisis fisicoquímicos</li>
+              <li>Buenas Prácticas de Laboratorio</li>
+              <li>Trazabilidad</li>
+              <li>Documentación técnica</li>
+              <li>Tratamiento de aguas</li>
+              <li>Gestión de residuos químicos</li>
+            </ul>
+          </article>
+          <article class="card skills-card">
+            <h3 class="skills-card-title"><span class="icon-wrap icon-md"><i class="bi bi-shield-check" aria-hidden="true"></i></span> Normativas y herramientas</h3>
+            <ul class="skills-list">
+              <li>ISO 9001</li>
+              <li>ISO 14001</li>
+              <li>ISO/IEC 17025</li>
+              <li>ISO 22000</li>
+              <li>ISO 22005</li>
+              <li>Microsoft Excel intermedio</li>
+            </ul>
+          </article>
+          <article class="card skills-card">
+            <h3 class="skills-card-title"><span class="icon-wrap icon-md"><i class="bi bi-person" aria-hidden="true"></i></span> Competencias profesionales</h3>
+            <ul class="skills-list">
+              <li>Supervisión operativa</li>
+              <li>Resolución de problemas</li>
+              <li>Mejora continua</li>
+              <li>Orientación a resultados</li>
+              <li>Trabajo en equipo</li>
+              <li>Comunicación técnica</li>
+              <li>Adaptabilidad</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
 
-    <!-- Bootstrap JS -->
-    <script 
-        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" 
-        integrity="sha384-ENjdO4Dr2bkBIFxQpg8RZLIZ6tC2es5TgF0f4kxcgHnpC819v7rq5Q+0Ce0h55H5" 
-        crossorigin="anonymous">
-    </script>
+    <!-- Formación complementaria -->
+    <section id="complementaria" class="section section-alt" aria-labelledby="comp-t">
+      <div class="container">
+        <h2 class="section-title" id="comp-t">Formación complementaria</h2>
+        <div class="cards-grid">
+          <article class="card feature-card">
+            <span class="icon-wrap icon-lg"><i class="bi bi-lightbulb" aria-hidden="true"></i></span>
+            <div>
+              <h3>Protocolo IFS y BRC en seguridad alimentaria</h3>
+              <p class="feature-year">2026</p>
+            </div>
+          </article>
+          <article class="card feature-card">
+            <span class="icon-wrap icon-lg"><i class="bi bi-hand-index-thumb" aria-hidden="true"></i></span>
+            <div>
+              <h3>Manipulador de alimentos</h3>
+              <p class="feature-year">2024</p>
+            </div>
+          </article>
+          <article class="card feature-card">
+            <span class="icon-wrap icon-lg"><i class="bi bi-award" aria-hidden="true"></i></span>
+            <div>
+              <h3>Seguridad e higiene industrial</h3>
+              <p class="feature-year">2022</p>
+            </div>
+          </article>
+          <article class="card feature-card">
+            <span class="icon-wrap icon-lg"><i class="bi bi-box-seam" aria-hidden="true"></i></span>
+            <div>
+              <h3>Calidad total</h3>
+              <p class="feature-year">2022</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contacto profesional -->
+    <section id="contacto" class="section" aria-labelledby="contact-t">
+      <div class="container">
+        <h2 class="section-title" id="contact-t">Contacto profesional</h2>
+        <div class="contact-layout">
+          <div class="contact-cards">
+            <article class="card contact-card">
+              <span class="icon-wrap icon-md"><i class="bi bi-telephone-fill" aria-hidden="true"></i></span>
+              <div>
+                <h3>Teléfono</h3>
+                <p><a href="tel:+34624813913">+34 624 81 39 13</a></p>
+              </div>
+            </article>
+            <article class="card contact-card">
+              <span class="icon-wrap icon-md"><i class="bi bi-envelope-open-fill" aria-hidden="true"></i></span>
+              <div>
+                <h3>Correo electrónico</h3>
+                <p><a href="mailto:fercore07@gmail.com">fercore07@gmail.com</a></p>
+              </div>
+            </article>
+            <article class="card contact-card">
+              <span class="icon-wrap icon-md"><i class="bi bi-linkedin" aria-hidden="true"></i></span>
+              <div>
+                <h3>LinkedIn</h3>
+                <p><a href="https://linkedin.com/in/allan-velasquez-29a45221a" target="_blank" rel="noopener">in/allan-velasquez-29a45221a</a></p>
+              </div>
+            </article>
+          </div>
+
+          <form class="contact-form" action="mailto:fercore07@gmail.com" method="POST" enctype="text/plain" aria-label="Formulario de contacto profesional">
+            <div class="form-field">
+              <label for="name">Nombre <span class="req" aria-hidden="true">*</span></label>
+              <input type="text" id="name" name="nombre" placeholder="Tu nombre completo" required aria-required="true" autocomplete="name" />
+            </div>
+            <div class="form-field">
+              <label for="email">Correo electrónico <span class="req" aria-hidden="true">*</span></label>
+              <input type="email" id="email" name="correo" placeholder="Tu correo" required aria-required="true" autocomplete="email" />
+            </div>
+            <div class="form-field">
+              <label for="message">Mensaje o consulta <span class="req" aria-hidden="true">*</span></label>
+              <textarea id="message" name="mensaje" rows="4" placeholder="Tu mensaje" required aria-required="true"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary btn-lg cta-submit">Enviar consulta</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- Descarga del currículum actualizado -->
+    <section id="descarga" class="section section-alt" aria-labelledby="descarga-t">
+      <div class="container">
+        <h2 class="section-title" id="descarga-t">Descargar CV</h2>
+        <div class="cv-download-box">
+          <a class="btn btn-primary btn-lg cv-link" href="CvJ%20Allan%20Velasquez%20Farmacia.pdf" download rel="noopener">
+            <i class="bi bi-file-earmark-pdf-fill" aria-hidden="true"></i> Descargar currículum actualizado (PDF)
+          </a>
+          <p class="cv-note">Currículum disponible en formato PDF. Fichero de carga: <code>CvJ Allan Velasquez Farmacia.pdf</code>. Si presenta eran do información desactualizada, del mismo modo se recomienda reemplazarlo por una versión revisada del CV Ingeniero Químico Industrial.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <p class="site-footer-brand">Allan Velásquez — Ingeniero Químico Industrial | Procesos, Producción y Calidad</p>
+      <nav class="site-footer-nav" aria-label="Navegación secundaria">
+        <a href="#sobre">Sobre mí</a>
+        <a href="#experiencia">Experiencia</a>
+        <a href="#habilidades">Competencias</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
+      <p class="site-footer-copy">© 2026 Allan Fernando Velásquez Corea. Todos los derechos reservados. Portafolio web desarrollado con tecnología moderna (HTML5, CSS3 y JavaScript), diseñado para el mercado laboral español.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
