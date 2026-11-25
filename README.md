@@ -28,5 +28,10 @@ Verificación de sintaxis:
 
 ```bash
 node --check script.js
-python3 /tmp/opencode/check_html.py index.html   # parser de sintaxis de HTML
+# parser de sintaxis de HTML y balance de etiquetas
 ```
+
+## Contexto para agentes futuros
+
+`PROJECT_CONTEXT.md` — documento de contexto completo (contenido profesional,
+sistema de diseño, SEO, historic, estado y notas pendientes).
