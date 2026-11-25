@@ -106,6 +106,7 @@ p { margin: 0; }
 .icon-wrap {
   display: grid;
   place-items: center;
+  line-height: 1;
   border-radius: 10px;
   background: var(--blue-light);
   color: var(--blue-corp);
@@ -382,6 +383,10 @@ p { margin: 0; }
 .areas-grid { display: grid; grid-template-columns: repeat(6, 1fr); gap: 1.25rem; }
 
 .area-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
   background: rgba(255, 255, 255, 0.03);
   border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: var(--radius-lg);
@@ -390,6 +395,7 @@ p { margin: 0; }
   transition: background 0.25s ease, border-color 0.25s ease;
 }
 .area-card:hover { background: rgba(255, 255, 255, 0.07); border-color: rgba(255, 255, 255, 0.22); }
+.area-card .icon-wrap.icon-lg { margin: 0; }
 .area-card h3 { color: #FFFFFF; font-size: 1.05rem; margin-top: 0.75rem; }
 .area-card p { color: #b1bccc; font-size: 0.9rem; margin-top: 0.4rem; line-height: 1.55; }
 
@@ -514,7 +520,7 @@ p { margin: 0; }
 
 .skills-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.25rem; }
 
-.skills-card { display: flex; flex-direction: column; gap: 0.75rem; min-height: 260px; }
+.skills-card { display: flex; flex-direction: column; align-items: center; text-align: center; gap: 0.6rem; min-height: 260px; }
 .skills-card h3 { display: flex; align-items: center; gap: 0.5rem; margin: 0; }
 .skills-list { display: flex; flex-wrap: wrap; gap: 0.4rem; }
 .skills-list li {
@@ -695,23 +701,54 @@ body.js-loaded .reveal.in-view {
   .site-nav.is-open .site-nav-links { display: flex; }
   .site-nav-links a { padding: 0.6rem 1rem; font-size: 1rem; border-radius: 0; }
 
-  .areas-grid { grid-template-columns: repeat(2, 1fr); }
-  .cards-grid { grid-template-columns: repeat(2, 1fr); }
+  .areas-grid { grid-template-columns: repeat(2, 1fr); gap: 1rem; }
+  .cards-grid { grid-template-columns: repeat(2, 1fr); gap: 1rem; }
+
+  /* Áreas: iconos y textos más compactos y centrados en 2 columnas */
+  .area-card .icon-wrap.icon-lg { width: 48px; height: 48px; font-size: 1.7rem; padding: 0.85rem; }
+  .area-card h3 { font-size: 0.98rem; }
+  .area-card p { font-size: 0.88rem; }
+
+  /* Timeline móvil: marcadores alineados con el eje vertical */
+  .timeline { padding-left: 18px; }
+  .timeline-item { padding-left: 36px; }
+  .timeline-marker { left: -16px; width: 28px; height: 28px; }
+  .timeline-dot { width: 12px; height: 12px; }
 }
 
 @media (max-width: 640px) {
   .hero-name { font-size: clamp(2rem, 8vw, 2.6rem); }
   .hero-photo { max-width: 320px; }
-  .timeline { padding-left: 24px; }
-  .timeline-item { padding-left: 40px; }
-  .timeline-marker { left: -22px; }
+
+  /* Áreas: más reducidos, centrados */
+  .areas-grid { gap: 0.75rem; }
+  .area-card .icon-wrap.icon-lg { width: 44px; height: 44px; font-size: 1.6rem; padding: 0.75rem; }
+  .area-card h3 { font-size: 0.94rem; }
+  .area-card p { font-size: 0.82rem; }
+
+  /* Competencias: más ajustados */
+  .skills-grid { gap: 0.75rem; }
+  .skills-card { min-height: 0; padding: 1.1rem 1rem; }
+  .skills-card-title { font-size: 1rem; }
+  .icon-wrap.icon-lg { width: 48px; height: 48px; font-size: 1.6rem; padding: 0.85rem; }
+  .icon-wrap.icon-md { width: 40px; height: 40px; font-size: 1.4rem; padding: 0.6rem; }
+
+  /* Timeline móvil refinado */
+  .timeline { padding-left: 16px; }
+  .timeline-item { padding-left: 34px; }
+  .timeline-marker { left: -12px; width: 26px; height: 26px; }
+  .timeline-dot { width: 11px; height: 11px; }
   .timeline-card { padding: 1.1rem 0.9rem; }
+
+  /* Gráfico abstracto: sin desborde ni desalineación */
+  .hero-graphic { width: clamp(180px, 45vw, 260px); inset-inline-end: 0; max-width: 100%; bottom: -2%; }
 }
 
 @media (max-width: 420px) {
-  .areas-grid { grid-template-columns: 1fr; }
-  .cards-grid { grid-template-columns: 1fr; }
-  .timeline-marker { left: -14px; }
+  .areas-grid { grid-template-columns: 1fr; gap: 0.5rem; }
+  .cards-grid { grid-template-columns: 1fr; gap: 0.5rem; }
+  .timeline-marker { left: -10px; width: 22px; height: 22px; }
   .timeline-item { padding-left: 30px; }
-  .skills-grid { grid-template-columns: 1fr; }
+  .skills-grid { grid-template-columns: 1fr; gap: 0.5rem; }
+  .icon-wrap.icon-lg { width: 44px; height: 44px; font-size: 1.5rem; padding: 0.7rem; }
 }
