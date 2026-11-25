@@ -12,6 +12,10 @@
 (function () {
   if (typeof document === "undefined") return;
 
+  // Permite a los estilos CSS distinguir "JS activado" de "sin JS".
+  // El contenido siempre es visible: sin JS las secciones se muestran a 1.
+  document.body.classList.add("js-loaded");
+
   const nav = document.querySelector(".site-nav");
   const navLinks = Array.from(document.querySelectorAll(".site-nav-links a"));
   const toggle = document.querySelector(".site-nav-toggle");
